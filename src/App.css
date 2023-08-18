@@ -10,6 +10,28 @@
   .options {
     background-color: aqua;
     height: 10dvh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  .option-icon_1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 15dvw;
+    justify-content: space-around;
+  }
+  .option-icon_2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 30dvw;
+  }
+  .option-icon_3 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    width: 45dvw;
   }
 
   .avatar {

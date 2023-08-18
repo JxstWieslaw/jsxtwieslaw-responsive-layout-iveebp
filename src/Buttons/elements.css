@@ -1,0 +1,74 @@
+.hoverfill:hover .applyhere {
+  fill-opacity: 1;
+}
+
+.hoverfillEl:hover .appliedhere {
+  fill-opacity: 0.7;
+}
+
+.option-selected {
+  fill-opacity: 1;
+}
+
+:root {
+  caret-color: transparent;
+  --objects-gap: 0px;
+  -webkit-user-select: none;  /* for Safari */
+  -moz-user-select: none;     /* for Firefox */
+  -ms-user-select: none;      /* for Internet Explorer */
+  user-select: none;  
+}
+
+/* @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+} */
+
+
+.change-styling:hover {
+  cursor: pointer;
+}
+.change-styling:hover .applyhere {
+  fill: #d1f7ff;
+  stroke: #eff8ff;
+}
+
+.option-selected.--is-active {
+  border: 3px solid blue;
+  border-radius: 12px;
+  cursor: default;
+}
+
+.object-selected.--is-active {
+  border-style: Solid;
+  border-color: #fab46e;
+  border-color: rgba(250, 180, 110, 1);
+  border-width: 6px;
+  -webkit-box-shadow: 0px 0px 4px #d3d9e1;
+  -moz-box-shadow: 0px 0px 4px #d3d9e1;
+  box-shadow: 0px 0px 4px #d3d9e1;
+  width: 80px;
+  height: 80px;
+  z-index: 10;
+  border-radius: 18px;
+  -moz-border-radius: 18px;
+  -webkit-border-radius: 18px;
+  cursor: default;
+}
+
+* {
+  touch-action: manipulation;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+
