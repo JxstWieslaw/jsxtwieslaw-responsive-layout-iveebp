@@ -3,19 +3,23 @@
 }
 
 @media (max-width: 480px) {
+  .main-container {
+    width: 100dvw;
+    height: 100dvh;
+  }
   .options {
     background-color: aqua;
-    height: 10vh;
+    height: 10dvh;
   }
 
   .avatar {
     background-color: chartreuse;
-    height: 40vh;
+    height: 40dvh;
   }
 
   .menu {
     background-color: blueviolet;
-    height: 40vh;
+    height: 40dvh;
   }
 }
 
@@ -23,7 +27,8 @@
   .main-container {
     display: flex;
     flex-direction: row;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
   }
   .options-container {
     display: flex;
