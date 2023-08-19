@@ -36,12 +36,12 @@ function App() {
           <div className="options">3</div>
         </div>
         <div className="menu">
-          <div className="">helloo</div>
-          helloo
+          <div className=""></div>
         </div>
       </div>
     </div>
   );
 }
-
 export default App;
+
+
