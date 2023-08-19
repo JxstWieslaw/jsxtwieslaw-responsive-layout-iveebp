@@ -36,7 +36,8 @@ function App() {
           <div className="options">3</div>
         </div>
         <div className="menu">
-          <div className="">4</div>
+          <div className="">helloo</div>
+          helloo
         </div>
       </div>
     </div>
