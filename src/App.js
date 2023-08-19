@@ -19,7 +19,7 @@ function App() {
       <div className="main-container">
         <div className="options-container">
           <div className="options">
-            <div className="option-icon_1">
+            <div className="option-icon_1">ICONS 1
               <HomeButton />
             </div>
             <div className="option-icon_3">
@@ -35,7 +35,7 @@ function App() {
           <div className="avatar">2</div>
           <div className="options">
             <div className="option-icon_1">
-              <HomeButton />
+              <HomeButton /> ICONS 2
             </div>
           </div>
         </div>
