@@ -8,6 +8,7 @@
     height: 100vh;
   }
   .options {
+    margin-top: 40px;
     background-color: aqua;
     height: 20vh;
     display: flex;
