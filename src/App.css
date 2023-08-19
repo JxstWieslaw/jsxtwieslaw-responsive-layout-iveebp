@@ -13,14 +13,14 @@
     background-color: aqua;
     height: 20vh;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     justify-content: space-around;
   }
 
   .option-icon_1 {
     z-index: 3;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     width: 40vw;
     height: auto;
     /* justify-content: space-around; */
