@@ -4,7 +4,7 @@ export const HomeButton = ({ onClick }) => {
   return (
     <>
       <svg
-        className="hover:cursor-pointer hoverfill border-4 border-indigo-500"
+        className="hover:cursor-pointer hoverfill "
         onClick={onClick}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 99.95 99.95"

@@ -19,25 +19,21 @@ function App() {
       <div className="main-container">
         <div className="options-container">
           <div className="options">
-            <div className="option-icon_1">ICONS 1
+            <div className="option-icon_1">
               <HomeButton />
             </div>
             <div className="option-icon_3">
-              {/* <BackButton />
+              <BackButton />
               <UploadButton />
-              <SearchButton /> */}
+              <SearchButton />
             </div>
             <div className="option-icon_2">
-              {/* <HeadButton />
-              <BodyButton /> */}
+              <HeadButton />
+              <BodyButton />
             </div>
           </div>
           <div className="avatar">2</div>
-          <div className="options">
-            <div className="option-icon_1">
-              <HomeButton /> ICONS 2
-            </div>
-          </div>
+          <div className="options">3</div>
         </div>
         <div className="menu">
           <div className=""></div>
