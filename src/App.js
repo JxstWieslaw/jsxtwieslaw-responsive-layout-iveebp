@@ -33,7 +33,16 @@ function App() {
             </div>
           </div>
           <div className="avatar">2</div>
-          <div className="options">3</div>
+          <div className="options">
+            <div className="option-icon_2">
+              <DownloadButton />
+              <SaveButton />
+            </div>
+            <div className="option-icon_2">
+              <AnimationButton1 />
+              <ResetButton />
+            </div>
+          </div>
         </div>
         <div className="menu">
           <div className=""></div>
