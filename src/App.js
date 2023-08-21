@@ -12,11 +12,16 @@ import {
   BodyButton,
   AnimationButton1,
 } from './Buttons';
-import useDrag from './ScrollBar/useDrag';
-import usePreventBodyScroll from './ScrollBar/usePreventBodyScroll';
 import { useCallback, useState } from 'react';
 import throttle from 'lodash/throttle';
-import { ScrollMenu } from 'react-horizontal-scrolling-menu/dist/types';
+import { ScrollMenu } from 'react-horizontal-scrolling-menu';
+import { LeftArrow, RightArrow } from './ScrollBar/arrows';
+// NOTE drag with mouse
+import useDrag from './ScrollBar/useDrag';
+import './ScrollBar/globalStyles.css';
+import usePreventBodyScroll from './ScrollBar/usePreventBodyScroll';
+// NOTE: embrace power of CSS flexbox!
+import './ScrollBar/hideScrollbar.css';
 
 function App() {
   //ScrollBar functionalities Start
