@@ -111,7 +111,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="menu">
+        <div className="menu overflow-y-auto">
           <div className="lg:absolute lg:bottom-1/4 flex flex-col  h-full lg:h-4/6 w-full lg:w-1/2">
             <div className="title-bar rounded-t-3xl">
               <div className="font-sans p-4 m-2 h-16 text-3xl text-white ">
