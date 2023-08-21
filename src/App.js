@@ -22,6 +22,11 @@ import './ScrollBar/globalStyles.css';
 import usePreventBodyScroll from './ScrollBar/usePreventBodyScroll';
 // NOTE: embrace power of CSS flexbox!
 import './ScrollBar/hideScrollbar.css';
+import { BoyOption, boyFaceInactive } from './Elements/swatch';
+import {
+  BoyUpperClothObject,
+  boyUpperClothes_Objects,
+} from './Elements/objects';
 
 function App() {
   //ScrollBar functionalities Start
@@ -50,6 +55,31 @@ function App() {
     }, 500),
     []
   );
+
+  //ScrollBar functionalities Start
+  function onWheel(apiObj, ev) {
+    const isThouchpad = Math.abs(ev.deltaX) !== 0 || Math.abs(ev.deltaY) < 15;
+
+    if (isThouchpad) {
+      ev.stopPropagation();
+      return;
+    }
+
+    if (ev.deltaY < 0) {
+      apiObj.scrollNext();
+    } else if (ev.deltaY > 0) {
+      apiObj.scrollPrev();
+    }
+  }
+
+  const scrollContainerClassName = `
+    justify-center`;
+
+  const optionsBarClassName = `${
+    1 === true
+      ? 'flex flex-col justify-center h-full '
+      : 'inline-flex flex-wrap'
+  }`;
 
   return (
     <div className="App">
@@ -82,7 +112,43 @@ function App() {
           </div>
         </div>
         <div className="menu">
-          <div className=""></div>
+          <div className="lg:absolute lg:bottom-1/4 flex flex-col  h-full lg:h-4/6 w-full lg:w-1/2">
+            <div className="title-bar rounded-t-3xl">
+              <div className="font-sans p-4 m-2 h-16 text-3xl text-white ">
+                Title
+              </div>
+            </div>
+            <div className="options-bar p-1">
+              <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
+                <ScrollMenu
+                  LeftArrow={LeftArrow}
+                  RightArrow={RightArrow}
+                  onInit={restorePosition}
+                  onScroll={savePosition}
+                  onWheel={onWheel}
+                  onMouseDown={() => dragStart}
+                  onMouseUp={() => dragStop}
+                  onMouseMove={handleDrag}
+                  scrollContainerClassName={scrollContainerClassName}
+                >
+                  {boyFaceInactive.map((options, index) => (
+                    <BoyOption key={index} id={index} options={options} />
+                  ))}
+                </ScrollMenu>
+              </div>
+            </div>
+            <div className="objects-bar h-screen">
+              <div className={optionsBarClassName}>
+                {boyUpperClothes_Objects.map((options, index) => (
+                  <BoyUpperClothObject
+                    key={index}
+                    id={index}
+                    options={options}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
