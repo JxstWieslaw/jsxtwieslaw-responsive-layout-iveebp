@@ -75,7 +75,7 @@ function App() {
   const scrollContainerClassName = `
     justify-center`;
 
-  const optionsBarClassName = `${
+  const optionsBarClassName = `overflow-y-auto h-full ${
     1 === true
       ? 'flex flex-col justify-center h-full '
       : 'inline-flex flex-wrap'
@@ -111,7 +111,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="menu overflow-y-auto">
+        <div className="menu">
           <div className="lg:absolute lg:bottom-1/4 flex flex-col  h-full lg:h-4/6 w-full lg:w-1/2">
             <div className="title-bar rounded-t-3xl">
               <div className="font-sans p-4 m-2 h-16 text-3xl text-white ">
@@ -137,7 +137,10 @@ function App() {
                 </ScrollMenu>
               </div>
             </div>
-            <div className="objects-bar h-screen">
+            <div>
+              
+            </div>
+            <div className="objects-bar  h-3/5">
               <div className={optionsBarClassName}>
                 {boyUpperClothes_Objects.map((options, index) => (
                   <BoyUpperClothObject
