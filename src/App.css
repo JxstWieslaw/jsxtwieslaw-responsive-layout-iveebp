@@ -52,8 +52,8 @@
   .main-container {
     display: flex;
     flex-direction: row;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
   }
   .options-container {
     display: flex;
@@ -62,7 +62,7 @@
 
   .options {
     background-color: aqua;
-    width: 10vw;
+    width: 10dvw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -70,8 +70,8 @@
   .option-icon_1 {
     display: flex;
     flex-direction:  column;
-    width: 10vw;
-    height: 15vh;
+    width: 10dvw;
+    height: 15dvh;
     justify-content: space-around;
   }
 
@@ -79,24 +79,24 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 10vw;
-    height: 30vh;
+    width: 10dvw;
+    height: 30dvh;
   }
   .option-icon_3 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 10vw;
-    height: 45vh;
+    width: 10dvw;
+    height: 45dvh;
   }
 
   .avatar {
     background-color: chartreuse;
-    width: 40vw;
+    width: 40dvw;
   }
 
   .menu {
     background-color: blueviolet;
-    width: 40vw;
+    width: 40dvw;
   }
 }
