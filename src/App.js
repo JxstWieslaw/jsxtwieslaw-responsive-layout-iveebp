@@ -16,6 +16,7 @@ import useDrag from './ScrollBar/useDrag';
 import usePreventBodyScroll from './ScrollBar/usePreventBodyScroll';
 import { useCallback, useState } from 'react';
 import throttle from 'lodash/throttle';
+import { ScrollMenu } from 'react-horizontal-scrolling-menu/dist/types';
 
 function App() {
   //ScrollBar functionalities Start
