@@ -137,9 +137,6 @@ function App() {
                 </ScrollMenu>
               </div>
             </div>
-            <div>
-              
-            </div>
             <div className="objects-bar  h-3/5">
               <div className={optionsBarClassName}>
                 {boyUpperClothes_Objects.map((options, index) => (
