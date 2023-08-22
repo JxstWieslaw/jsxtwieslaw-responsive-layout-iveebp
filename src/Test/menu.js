@@ -23,7 +23,7 @@
       </div>
     </div>
     <div className="objects-bar h-screen">
-      <div ref={container} className={optionsBarClassName}>
+      <div className={optionsBarClassName}>
         {boyUpperClothes_Objects.map((options, index) => (
           <BoyUpperClothObject
             key={index}
