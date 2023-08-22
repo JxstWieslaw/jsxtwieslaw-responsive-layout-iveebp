@@ -114,11 +114,11 @@ function App() {
         <div className="menu">
           <div className="lg:absolute lg:bottom-1/4 flex flex-col  h-full lg:h-4/6 w-full lg:w-1/2">
             <div className="title-bar h-1/6 rounded-t-3xl">
-              <div className="font-sans p-1 mb-2 h-full text-3xl text-white ">
+              <div className="font-sans p-1 h-full text-3xl text-white ">
                 Title
               </div>
             </div>
-            <div className="options-bar h-1/6 p-1">
+            <div className="options-bar h-1/6 mb-2 p-1">
               <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
                 <ScrollMenu
                   LeftArrow={LeftArrow}
