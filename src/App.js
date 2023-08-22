@@ -113,12 +113,12 @@ function App() {
         </div>
         <div className="menu">
           <div className="lg:absolute lg:bottom-1/4 flex flex-col  h-full lg:h-4/6 w-full lg:w-1/2">
-            <div className="title-bar h-1/6 rounded-t-3xl">
-              <div className="font-sans p-1 h-full text-3xl text-white ">
+            <div className="title-bar rounded-t-3xl">
+              <div className="font-sans p-4 m-2 h-16 text-3xl text-white ">
                 Title
               </div>
             </div>
-            <div className="options-bar h-1/6 pb-1">
+            <div className="options-bar p-1">
               <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
                 <ScrollMenu
                   LeftArrow={LeftArrow}
@@ -137,7 +137,7 @@ function App() {
                 </ScrollMenu>
               </div>
             </div>
-            <div className="objects-bar  h-4/6">
+            <div className="objects-bar  h-3/5">
               {/* <div className="w-auto"> */}
               <div className={optionsBarClassName}>
                 {boyUpperClothes_Objects.map((options, index) => (
