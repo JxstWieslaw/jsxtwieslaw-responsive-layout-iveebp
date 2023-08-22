@@ -75,7 +75,7 @@ function App() {
   const scrollContainerClassName = `
     justify-center`;
 
-  const optionsBarClassName = `overflow-y-auto h-full justify-center ${
+  const optionsBarClassName = `overflow-hidden h-full justify-evenly  ${
     1 === true
       ? 'flex flex-col justify-center h-full '
       : 'inline-flex flex-wrap'
