@@ -584,40 +584,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
 .visible {
   visibility: visible;
 }
@@ -639,12 +605,24 @@ video {
   margin-right: 0.75rem;
 }
 
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .inline-block {
   display: inline-block;
 }
 
 .flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 .hidden {
@@ -659,6 +637,14 @@ video {
   height: 4rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
+.h-3\/5 {
+  height: 60%;
+}
+
 .h-full {
   height: 100%;
 }
@@ -667,8 +653,21 @@ video {
   height: 100vh;
 }
 
+.w-20 {
+  width: 5rem;
+}
+
+.w-auto {
+  width: auto;
+}
+
 .w-full {
   width: 100%;
+}
+
+.w-max {
+  width: -webkit-max-content;
+  width: max-content;
 }
 
 .transform {
@@ -688,6 +687,18 @@ video {
   flex-direction: column;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.place-content-evenly {
+  place-content: space-evenly;
+}
+
+.content-evenly {
+  align-content: space-evenly;
+}
+
 .items-center {
   align-items: center;
 }
@@ -700,6 +711,18 @@ video {
   justify-content: space-between;
 }
 
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .rounded-t-3xl {
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
@@ -707,6 +730,11 @@ video {
 
 .border {
   border-width: 1px;
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
 .bg-green-500 {
@@ -728,6 +756,10 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 .font-sans {
