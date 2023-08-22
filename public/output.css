@@ -588,6 +588,10 @@ video {
   visibility: visible;
 }
 
+.relative {
+  position: relative;
+}
+
 .m-2 {
   margin: 0.5rem;
 }
@@ -668,6 +672,10 @@ video {
 .w-max {
   width: -webkit-max-content;
   width: max-content;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .transform {
