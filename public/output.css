@@ -727,6 +727,14 @@ video {
   place-content: space-evenly;
 }
 
+.content-center {
+  align-content: center;
+}
+
+.content-around {
+  align-content: space-around;
+}
+
 .content-evenly {
   align-content: space-evenly;
 }
