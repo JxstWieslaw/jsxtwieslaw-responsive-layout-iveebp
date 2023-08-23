@@ -75,7 +75,7 @@ function App() {
   const scrollContainerClassName = `
     justify-center`;
 
-  const optionsBarClassName = `overflow-y-scroll h-full items-end justify-evenly  ${
+  const optionsBarClassName = `overflow-y-scroll h-full items-end justify-evenly mt-2 ${
     1 === true
       ? 'flex flex-col justify-center h-full '
       : 'inline-flex flex-wrap'
@@ -118,7 +118,7 @@ function App() {
                 Title
               </div>
             </div>
-            <div className="options-bar h-1/6 p-1">
+            <div className="options-bar h-1/6 p-1 ">
               <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
                 <ScrollMenu
                   LeftArrow={LeftArrow}
