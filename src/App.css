@@ -4,14 +4,13 @@
   position: relative;
 }
 
-
-
 @media (max-width: 480px) {
   .main-container {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    z-index:1;
+    z-index: 1;
+    display: none;
   }
   .options {
     background-color: aqua;
@@ -61,7 +60,7 @@
     flex-direction: row;
     width: 100dvw;
     height: 100dvh;
-    z-index:1;
+    z-index: 1;
   }
   .options-container {
     display: flex;
@@ -181,7 +180,6 @@
 .objects-bar {
   background: #f2f2f2;
   background: rgba(242, 242, 242, 1);
-  
 }
 .icons {
   background: #f2f2f2;
@@ -212,8 +210,7 @@
   margin: 8px !important;
 }
 
-
-.rotate-warning-container{
+.rotate-warning-container {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -224,7 +221,7 @@
   align-items: center;
   flex-direction: column;
   background: black;
-  z-index:2;
+  z-index: 2;
 }
 
 .phone {
@@ -245,24 +242,27 @@
 
 @keyframes rotate {
   0% {
-		transform: rotate(0deg)
-	}
-	50% {
-		transform: rotate(-90deg)
-	}
-	100% {
-		transform: rotate(-90deg)
-	}
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
 }
 
-
-@media only screen and (max-width: 480px)and (orientation: potrait) {
-  .phone, .message ,.rotate-warning-container{
+@media only screen and (max-width: 480px) and (orientation: potrait) {
+  .phone,
+  .message,
+  .rotate-warning-container {
     display: block;
   }
 }
 @media only screen and (min-width: 480px) and (orientation: landscape) {
-  .phone, .message, .rotate-warning-container{
+  .phone,
+  .message,
+  .rotate-warning-container {
     display: none;
   }
 }
