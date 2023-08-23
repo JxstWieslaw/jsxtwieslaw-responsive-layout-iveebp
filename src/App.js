@@ -12,7 +12,7 @@ import {
   BodyButton,
   AnimationButton1,
 } from './Buttons';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import throttle from 'lodash/throttle';
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import { LeftArrow, RightArrow } from './ScrollBar/arrows';
@@ -31,6 +31,7 @@ import {
 
 function App() {
   //ScrollBar functionalities Start
+  const optionsBar  = useRef()
   const [position, setPosition] = useState(0);
   const { disableScroll, enableScroll } = usePreventBodyScroll();
   const { dragStart, dragStop, dragMove, dragging } = useDrag();
@@ -76,11 +77,25 @@ function App() {
   const scrollContainerClassName = `
     justify-center  content-around`;
 
-  const optionsBarClassName = `overflow-y-scroll h-full items-end justify-evenly  ${
+  const optionsBarClassName = `overflow-y-scroll items-end justify-evenly  ${
     1 === true
       ? 'flex flex-col justify-center h-full '
       : 'inline-flex flex-wrap'
   }`;
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      const optionsBarHeight = optionsBar.current.clientHeight; 
+      document.documentElement.style.setProperty("--optionsBarHeight", `${optionsBarHeight}px`);
+    };
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+  
+  useEffect(() => {
+    const optionsBarHeight = optionsBar.current.clientHeight; 
+    document.documentElement.style.setProperty("--optionsBarHeight", `${optionsBarHeight}px`);
+  }, []);
 
   return (
     <>
@@ -124,8 +139,8 @@ function App() {
                   Title
                 </div>
               </div>
-              <div className="options-bar  h-1/6 content-center">
-                <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
+              <div className="options-bar  content-center">
+                <div ref={optionsBar} onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
                   <ScrollMenu
                     LeftArrow={LeftArrow}
                     RightArrow={RightArrow}
@@ -143,9 +158,9 @@ function App() {
                   </ScrollMenu>
                 </div>
               </div>
-              <div className="objects-bar  h-4/6">
+              <div className="objects-bar  ">
                 {/* <div className="w-auto"> */}
-                <div className={optionsBarClassName}>
+                <div className={optionsBarClassName} id="objects-bar-div">
                   {boyUpperClothes_Objects.map((options, index) => (
                     <BoyUpperClothObject
                       key={index}

@@ -619,7 +619,7 @@ export const boyUpperClothes_Objects = [
 ];
 
 export const BoyUpperClothObject = ({ options, active, id, onClick }) => {
-  const className = `overflow-hidden object-selected  w-20 ${
+  const className = `object-selected  w-20 ${
     options.alt_text !== 'extra' ? 'p-2 h-20' : ''
   }   ${options.alt_text === active ? '--is-active' : ''}`;
   return (
