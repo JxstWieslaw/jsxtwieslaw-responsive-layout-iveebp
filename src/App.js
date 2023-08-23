@@ -118,7 +118,7 @@ function App() {
                 Title
               </div>
             </div>
-            <div className="options-bar p-1">
+            <div className="options-bar h-1/6 p-1">
               <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
                 <ScrollMenu
                   LeftArrow={LeftArrow}
