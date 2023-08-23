@@ -1,0 +1,44 @@
+#warning-message {
+  display: none;
+}
+@media only screen and (orientation: portrait) {
+  #wrapper {
+    display: none;
+  }
+  #warning-message {
+    display: block;
+  }
+}
+@media only screen and (orientation: landscape) {
+  #warning-message {
+    display: none;
+  }
+}
+
+#rotation-warning {
+
+	display: none!important;
+}
+@media only screen and (orientation: landscape) {
+		
+   /* HIDE EVERYTHING OTHER THAN THE WARNING */
+	nav, header, section, footer, .fixed-action-btn {display: none!important;}
+  
+	 /* SHOW THE PREVIOUSLY HIDDEN WARNING NOW */
+	#rotation-warning {
+		display: block!important;
+		background-color: #ee6f73;
+  	height: 100vh;
+  	width: 100vw;
+  	text-align: center;
+  	overflow: hidden;
+		color: #fff;
+  }
+
+  #rotation-warning i {
+    margin-top: 10%;
+    font-size: 25vw;
+  }
+}
+
+
