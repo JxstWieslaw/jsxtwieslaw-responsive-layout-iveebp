@@ -627,6 +627,7 @@ export const BoyUpperClothObject = ({ options, active, id, onClick }) => {
       <div id={options.id} className={className} onClick={onClick}>
         {options.icon}
       </div>
+    
     </>
   );
 };

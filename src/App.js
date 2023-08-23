@@ -27,6 +27,7 @@ import {
   BoyUpperClothObject,
   boyUpperClothes_Objects,
 } from './Elements/objects';
+// import { RotateWarning } from './Orientation';
 
 function App() {
   //ScrollBar functionalities Start
@@ -82,78 +83,84 @@ function App() {
   }`;
 
   return (
-    <div className="App">
-      <div className="main-container">
-        <div className="options-container">
-          <div className="options">
-            <div className="option-icon_1">
-              <HomeButton />
-            </div>
-            <div className="option-icon_3">
-              <BackButton />
-              <UploadButton />
-              <SearchButton />
-            </div>
-            <div className="option-icon_2">
-              <HeadButton />
-              <BodyButton />
-            </div>
-          </div>
-          <div className="avatar">2</div>
-          <div className="options">
-            <div className="option-icon_2">
-              <DownloadButton />
-              <SaveButton />
-            </div>
-            <div className="option-icon_2">
-              <AnimationButton1 />
-              <ResetButton />
-            </div>
-          </div>
+    <>
+      <div className="App">
+        <div className="rotate-warning-container">
+          <div class="phone"></div>
+          <div class="message">Please rotate your device!</div>
         </div>
-        <div className="menu">
-          <div className="lg:absolute lg:bottom-1/4 flex flex-col  h-full lg:h-4/6 w-full lg:w-1/2">
-            <div className="title-bar h-1/6 rounded-t-3xl">
-              <div className="font-sans p-4h-full text-3xl text-white ">
-                Title
+        <div className="main-container">
+          <div className="options-container">
+            <div className="options">
+              <div className="option-icon_1">
+                <HomeButton />
+              </div>
+              <div className="option-icon_3">
+                <BackButton />
+                <UploadButton />
+                <SearchButton />
+              </div>
+              <div className="option-icon_2">
+                <HeadButton />
+                <BodyButton />
               </div>
             </div>
-            <div className="options-bar  content-center">
-              <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
-                <ScrollMenu
-                  LeftArrow={LeftArrow}
-                  RightArrow={RightArrow}
-                  onInit={restorePosition}
-                  onScroll={savePosition}
-                  onWheel={onWheel}
-                  onMouseDown={() => dragStart}
-                  onMouseUp={() => dragStop}
-                  onMouseMove={handleDrag}
-                  scrollContainerClassName={scrollContainerClassName}
-                >
-                  {boyFaceInactive.map((options, index) => (
-                    <BoyOption key={index} id={index} options={options} />
+            <div className="avatar">2</div>
+            <div className="options">
+              <div className="option-icon_2">
+                <DownloadButton />
+                <SaveButton />
+              </div>
+              <div className="option-icon_2">
+                <AnimationButton1 />
+                <ResetButton />
+              </div>
+            </div>
+          </div>
+          <div className="menu">
+            <div className="lg:absolute lg:bottom-1/4 flex flex-col  h-full lg:h-4/6 w-full lg:w-1/2">
+              <div className="title-bar h-1/6 rounded-t-3xl">
+                <div className="font-sans p-4h-full text-3xl text-white ">
+                  Title
+                </div>
+              </div>
+              <div className="options-bar  content-center">
+                <div onMouseEnter={disableScroll} onMouseLeave={enableScroll}>
+                  <ScrollMenu
+                    LeftArrow={LeftArrow}
+                    RightArrow={RightArrow}
+                    onInit={restorePosition}
+                    onScroll={savePosition}
+                    onWheel={onWheel}
+                    onMouseDown={() => dragStart}
+                    onMouseUp={() => dragStop}
+                    onMouseMove={handleDrag}
+                    scrollContainerClassName={scrollContainerClassName}
+                  >
+                    {boyFaceInactive.map((options, index) => (
+                      <BoyOption key={index} id={index} options={options} />
+                    ))}
+                  </ScrollMenu>
+                </div>
+              </div>
+              <div className="objects-bar  h-4/6">
+                {/* <div className="w-auto"> */}
+                <div className={optionsBarClassName}>
+                  {boyUpperClothes_Objects.map((options, index) => (
+                    <BoyUpperClothObject
+                      key={index}
+                      id={index}
+                      options={options}
+                    />
                   ))}
-                </ScrollMenu>
+                </div>
+                {/* </div> */}
               </div>
-            </div>
-            <div className="objects-bar  h-4/6">
-              {/* <div className="w-auto"> */}
-              <div className={optionsBarClassName}>
-                {boyUpperClothes_Objects.map((options, index) => (
-                  <BoyUpperClothObject
-                    key={index}
-                    id={index}
-                    options={options}
-                  />
-                ))}
-              </div>
-              {/* </div> */}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 export default App;

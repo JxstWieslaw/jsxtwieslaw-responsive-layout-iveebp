@@ -16,29 +16,52 @@
 }
 
 #rotation-warning {
-
-	display: none!important;
-}
-@media only screen and (orientation: landscape) {
-		
-   /* HIDE EVERYTHING OTHER THAN THE WARNING */
-	nav, header, section, footer, .fixed-action-btn {display: none!important;}
-  
-	 /* SHOW THE PREVIOUSLY HIDDEN WARNING NOW */
-	#rotation-warning {
-		display: block!important;
-		background-color: #ee6f73;
-  	height: 100vh;
-  	width: 100vw;
-  	text-align: center;
-  	overflow: hidden;
-		color: #fff;
-  }
-
-  #rotation-warning i {
-    margin-top: 10%;
-    font-size: 25vw;
-  }
+  /* // HIDE THE WARNING IN NORMAL ORIENTATION */
+  display: block !important;
+  background-color: #ee6f73;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  /* i {
+			margin-top: 10%;
+  		font-size: 25vw;
+		} */
 }
 
+nav,
+header,
+section,
+footer,
+.fixed-action-btn {
+  display: none !important;
+}
 
+/* // LANDSCAPE RULES */
+@media only screen /* // THE CRITERIA // ===== UNCOMMENT THESE FOR PRODUCTION ===== //and (min-device-width: 320px) //and (max-device-width: 480px) //and (-webkit-min-device-pixel-ratio: 2) */ and (orientation: landscape) {
+  /* 		
+  // HIDE EVERYTHING OTHER THAN THE WARNING */
+  nav,
+  header,
+  section,
+  footer,
+  .fixed-action-btn {
+    display: block !important;
+  }
+
+  /* // SHOW THE PREVIOUSLY HIDDEN WARNING NOW */
+  #rotation-warning {
+    display: none !important;
+    background-color: #ee6f73;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    /* i {
+			margin-top: 10%;
+  		font-size: 25vw;
+		} */
+  }
+}
